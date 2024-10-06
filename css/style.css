@@ -1487,13 +1487,13 @@ footer {
         }
 
         .contact_us ul li {
-            margin-left: 10px;
+            margin-left: 20px;
             margin-bottom: 5px;
             /* Adjust spacing for list items */
         }
 
         .contact_us ul li span {
-            font-size: 15px;
+            font-size: 20px;
             text-align: left;
         }
 
