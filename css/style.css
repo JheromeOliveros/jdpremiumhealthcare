@@ -1,0 +1,1435 @@
+/* Importing Google font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+/* Defining Custome Variables */
+:root {
+    /* Colors */
+    --primary-color: rgb(11, 144, 139);
+    --secondary-color: #ffffff;
+    --accent-color: #FFA500;
+    --light-gray-color: #f2f2f2;
+    --black-color: black;
+
+    /* Site Max-Width */
+    --site-max-width: 1300px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+/* Setting for the whole website */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.section_container {
+    margin: 0 auto;
+    max-width: var(--site-max-width);
+}
+
+.section_title {
+    text-align: center;
+    padding: 60px 0 100px;
+    font-size: 32px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.section_title::after {
+    content: '';
+    width: 80px;
+    background: var(--black-color);
+    height: 1px;
+    display: block;
+    margin: 7px auto 0;
+    border-radius: 8px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(240, 255, 240, 0.3), rgba(240, 255, 255, 0.3));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    padding: 8px 0 8px 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: var(--site-max-width);
+}
+
+nav .nav_logo a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+nav .nav_logo a img {
+    width: 210px;
+    height: 55px;
+}
+
+nav ul {
+    display: flex;
+    gap: 4px;
+    margin-right: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 67px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 25px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black-color);
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.nav_content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone_number {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--black-color);
+    margin-left: 20px;
+    margin-right: 32px;
+    gap: 10px;
+}
+
+.phone_number p strong {
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.phone_number .bx-phone {
+    font-size: 26px;
+    color: var(--primary-color);
+}
+
+#click {
+    display: none;
+}
+
+.container {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+#click:checked~ul {
+    left: 0;
+    /* Show menu when checkbox is checked */
+}
+
+#click:checked~label .close_btn {
+    display: block;
+    /* Show close button */
+}
+
+#click:checked~label .menu_btn {
+    display: none;
+    /* Hide menu button */
+}
+
+/* Hero Section */
+.hero_section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 85px;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero_image {
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Ensure it's behind everything */
+}
+
+.hero_container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    /* Ensure the container takes full width */
+    margin-left: -40px;
+    padding: 20px;
+}
+
+.text_section {
+    margin-top: 220px;
+    z-index: 1;
+}
+
+.hero_container .text_section h2 {
+    font-size: 45px;
+    color: black;
+}
+
+.hero_container .text_section h3 {
+    font-size: 27px;
+    font-weight: 600;
+    color: black;
+    margin-top: 7px;
+}
+
+.hero_container .text_section p {
+    font-size: 19px;
+    font-weight: 400;
+    color: black;
+    margin: 17px 0 20px;
+    max-width: 55%;
+}
+
+.hero_container .hero_section_button {
+    display: flex;
+    gap: 24px;
+    z-index: 1;
+}
+
+.hero_container .hero_section_button .button {
+    padding: 8px 28px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    border-color: var(--black-color);
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.hero_container .hero_section_button .button:hover {
+    color: var(--primary-color);
+    background: none;
+    border-color: var(--black-color);
+}
+
+/* Provider Section */
+.provider_section {
+    padding: 60px 20px 120px;
+    background: var(--secondary-color);
+    text-align: center;
+    margin-top: -25px;
+}
+
+.provider_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.provider_section .section_title::after {
+    content: '';
+    width: 80px;
+    background: var(--black-color);
+    height: 0..5px;
+    display: block;
+    margin: 7px auto 0;
+    border-radius: 8px;
+}
+
+.providers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 46px;
+    margin: 5px 0 20px;
+}
+
+.provider_card {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 35px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.provider_image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.provider_card h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+.provider_card h3 span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-left: 5px;
+}
+
+/* Services Section */
+.services_section {
+    position: relative;
+    padding: 20px 10px;
+    overflow: hidden;
+    height: auto;
+}
+
+.background_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.section_container {
+    display: flex;
+    width: 100%;
+}
+
+.image_section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+.services_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list_section {
+    flex: 1;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: left;
+    text-align: left;
+}
+
+.services_section .section_title {
+    font-size: 30px;
+    color: var(--black-color);
+    text-align: left;
+    margin-right: 180px;
+}
+
+.section_title::after {
+    content: '';
+    width: 80px;
+    background: var(--black-color);
+    height: 0.5px;
+    display: block;
+    margin: 7px auto 0;
+    border-radius: 8px;
+}
+
+.services_list {
+    list-style: none;
+    padding: 0;
+    margin: -1px 80px 50px;
+    text-align: left;
+}
+
+.services_list li {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.services_list i {
+    font-size: 25px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Patient Reviews Section */
+.reviews {
+    background: var(--light-gray-color);
+    padding: 40px 20px 80px;
+    position: relative;
+}
+
+.reviews::after {
+    content: '';
+    display: block;
+    position: absolute;
+    /* Position the line absolutely within the .reviews container */
+    left: 0;
+    right: 0;
+    height: 0.5px;
+    background-color: black;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    z-index: 1;
+    /* Ensure it's above other content if needed */
+}
+
+.reviews .section_title::after {
+    content: '';
+    width: 80px;
+    background: var(--black-color);
+    height: 0.5px;
+    display: block;
+    margin: 7px auto 0;
+    border-radius: 8px;
+}
+
+.reviews .reviews_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reviews_container .reviews_items {
+    position: relative;
+    width: calc(100% / 4 - 24px);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.reviews .reviews_container img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.reviews_container .reviews_items:hover img {
+    transform: scale(1.1);
+}
+
+.text_overlay {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    font-weight: 300;
+}
+
+/* General Footer Styles */
+footer {
+    background-color: white;
+    color: black;
+    padding: 70px 20px 50px;
+}
+
+.footer_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer_logo img {
+    max-width: 350px;
+    margin-top: 80px;
+    margin-right: 100px;
+    margin-left: 10px;
+}
+
+.contact_us,
+.follow_us {
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.contact_us h3,
+.follow_us h3 {
+    font-size: 25px;
+    margin-bottom: 35px;
+    color: black;
+    font-weight: 600;
+}
+
+.contact_us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact_us ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact_us ul li i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    font-size: 33px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.bold-text {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+
+/* Follow Us Icons */
+.follow_us i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+
+/* Boxicons Icon Classes */
+.icon-circle-location::before {
+    content: "\e64f";
+}
+
+.icon-circle-envelope::before {
+    content: "\e650";
+}
+
+.icon-circle-phone::before {
+    content: "\e653";
+}
+
+.icon-circle-fax::before {
+    content: "\e67b";
+}
+
+.icon-circle-time::before {
+    content: "\e67e";
+}
+
+.icon-circle-facebook::before {
+    content: "\e67b";
+}
+
+.icon-circle-instagram::before {
+    content: "\e64b";
+}
+
+/* Footer Bottom */
+.footer_bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer_bottom .footer_credits {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+/* Credits Footer Styling */
+.credits-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    left: 0;
+}
+
+.credits-footer p {
+    margin: 0;
+    padding: 0.3rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    text-transform: none;
+}
+
+/* Media Query for 1200px */
+@media screen and (max-width: 1200px) {
+    nav .nav_logo a img {
+        width: 190px;
+        height: 50px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .phone_number p strong {
+        font-weight: 600;
+        color: var(--black-color);
+        font-size: 15px;
+    }
+
+    .phone_number .bx-phone {
+        font-size: 19px;
+        color: var(--primary-color);
+    }
+
+    .container {
+        display: none;
+    }
+
+    .hero_image {
+        position: absolute;
+        top: -90px;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .hero_container .text_section h2 {
+        margin-left: 60px;
+        font-size: 45px;
+        color: black;
+    }
+
+    .hero_container .text_section h3 {
+        margin-left: 60px;
+        font-size: 23px;
+        font-weight: 600;
+        color: black;
+        margin-top: 7px;
+    }
+
+    .hero_container .text_section p {
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        margin: 17px 0 20px;
+        max-width: 50%;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button {
+        display: flex;
+        gap: 24px;
+        z-index: 1;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button .button {
+        padding: 8px 28px;
+        border: 1px solid transparent;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--secondary-color);
+        border-color: var(--black-color);
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .footer_logo img {
+        max-width: 270px;
+        margin-top: 100px;
+        margin-right: 65px;
+        margin-left: 30px;
+    }
+    
+    .contact_us,
+    .follow_us {
+        margin-bottom: 20px;
+        margin-right: 40px;
+    }
+    
+    .contact_us h3,
+    .follow_us h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: black;
+        font-weight: 600;
+    }
+    
+    .contact_us ul li i {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        color: #fff;
+        font-size: 28px;
+        margin-right: 10px;
+        color: var(--primary-color);
+    }
+
+    .contact_us ul li span {
+        font-size: 16px;
+    }
+    
+    .bold-text {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+    
+    /* Follow Us Icons */
+    .follow_us i {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+
+/* Media Query for 769px to 1024px */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        display: inline-block; /* Treats ul as inline block to center it */
+        text-align: center; /* Centers the items inside ul */
+        margin: 0 auto; /* Centers ul itself */
+        padding: 0;
+    }
+
+    .container {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .phone_number {
+        display: flex;
+        align-items: center; /* Vertically aligns the icon and number */
+    }
+
+    .phone_number .bx-phone {
+        margin-left: -40px;
+    }
+    
+    .phone_number p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px; /* Adjust the size if needed */
+    }
+
+    nav .nav_logo a img {
+        width: 180px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .hero_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 100vh;
+        z-index: -1;
+    }
+
+    .hero_container .text_section h2 {
+        margin-left: 60px;
+        font-size: 42px;
+        color: black;
+    }
+
+    .hero_container .text_section h3 {
+        margin-left: 60px;
+        font-size: 19px;
+        font-weight: 600;
+        color: black;
+        margin-top: 7px;
+        max-width: 50%;
+    }
+
+    .hero_container .text_section p {
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        margin: 17px 0 20px;
+        max-width: 50%;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button {
+        display: flex;
+        gap: 24px;
+        z-index: 1;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button .button {
+        padding: 6px 25px;
+        border: 1px solid transparent;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--secondary-color);
+        border-color: var(--black-color);
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .provider_card {
+        padding: 13px 0;
+    }
+    
+    .provider_image {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .provider_card h3 {
+        font-size: 13px;
+        margin-left: -1px;
+    }
+    
+    .provider_card h3 span {
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    
+    .reviews .reviews_container {
+        gap: 27px;
+    }
+    
+    .reviews .reviews_container img {
+        width: 100%;
+    }
+    
+    .text_overlay {
+        color: white;
+        font-size: 0.8rem;
+        width: 95%;
+    }
+
+    .footer_logo img {
+        max-width: 230px;
+        margin-top: 100px;
+        margin-right: 40px;
+        margin-left: 10px;
+    }
+    
+    .contact_us,
+    .follow_us {
+        margin-bottom: 20px;
+        margin-right: 50px;
+    }
+    
+    .contact_us h3,
+    .follow_us h3 {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: black;
+        font-weight: 600;
+    }
+    
+    .contact_us ul li i {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        color: #fff;
+        font-size: 28px;
+        margin-right: 10px;
+        color: var(--primary-color);
+    }
+
+    .contact_us ul li span {
+        font-size: 15px;
+    }
+    
+    .bold-text {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+    
+    /* Follow Us Icons */
+    .follow_us i {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 20px;
+    }
+
+    .credits-footer {
+        padding-top: 1px 0;
+    }
+
+    .credits-footer p {
+        font-size: 13px;
+    }
+}
+
+/* Media Query for 481px to 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    nav ul {
+        display: inline-block; /* Treats ul as inline block to center it */
+        text-align: center; /* Centers the items inside ul */
+        margin: 0 auto; /* Centers ul itself */
+        padding: 0;
+    }
+
+    .container {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .phone_number {
+        display: flex;
+        align-items: center; /* Vertically aligns the icon and number */
+    }
+
+    .phone_number .bx-phone {
+        margin-left: -40px;
+    }
+    
+    .phone_number p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px; /* Adjust the size if needed */
+    }
+
+    nav .nav_logo a img {
+        width: 180px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .hero_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 100vh;
+        z-index: -1;
+    }
+
+    .hero_container .text_section h2 {
+        margin-left: 60px;
+        font-size: 42px;
+        color: black;
+    }
+
+    .hero_container .text_section h3 {
+        margin-left: 60px;
+        font-size: 19px;
+        font-weight: 600;
+        color: black;
+        margin-top: 7px;
+        max-width: 50%;
+    }
+
+    .hero_container .text_section p {
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        margin: 17px 0 20px;
+        max-width: 50%;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button {
+        display: flex;
+        gap: 24px;
+        z-index: 1;
+        margin-left: 60px;
+    }
+
+    .hero_container .hero_section_button .button {
+        padding: 5px 18px;
+        border: 1px solid transparent;
+        font-size: 13px;
+    }
+
+    .provider_card {
+        padding: 13px 0;
+        width: calc(50% - 23px);
+    }
+    
+    .provider_image {
+        width: 70%;
+        margin-bottom: 10px;
+        padding-left: -10px;
+    }
+    
+    .provider_card h3 {
+        font-size: 18px;
+        margin-left: -1px;
+    }
+    
+    .provider_card h3 span {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .services_section .section_title {
+        margin-right: 50px;
+    }
+
+    .services_list li {
+        font-size: 20px;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+        margin-right: -80px;
+    }
+    
+    .services_list i {
+        font-size: 20px;
+        color: var(--primary-color);
+        margin-right: -5px;
+    }
+    
+    .reviews .reviews_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .reviews_container .reviews_items {
+        width: calc(33.33% - 21px); 
+        margin-bottom: 24px; 
+    }
+
+    .reviews_container .reviews_items:nth-last-child(2),
+    .reviews_container .reviews_items:nth-last-child(1) {
+        width: calc(33.33% - 21px);
+        margin-right: 0;
+    }
+
+    .reviews_container .reviews_items:nth-last-child(2) {
+        margin-right: 0;
+        margin-left: 120px;
+    }
+
+    .reviews .reviews_container img {
+        width: 100%;
+        height: 250px; 
+        border-radius: 8px; 
+        transition: transform 0.3s ease;
+    }
+    
+    .text_overlay {
+        color: white;
+        font-size: 0.8rem;
+        width: 95%;
+    }
+
+    .footer_logo img {
+        max-width: 160px;
+        margin-top: 80px;
+        margin-right: 25px;
+        margin-left: 10px;
+    }
+    
+    .contact_us,
+    .follow_us {
+        margin-bottom: 20px;
+        margin-right: -10px;
+    }
+    
+    .contact_us h3,
+    .follow_us h3 {
+        font-size: 13px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    
+    .contact_us ul li i {
+        align-items: center;
+        width: 30px;
+        height: 20px;
+        color: #fff;
+        font-size: 17px;
+        margin-right: 5px;
+        color: var(--primary-color);
+    }
+
+    .contact_us ul li span {
+        font-size: 12px;
+        margin-right: 33px;
+    }
+    
+    .bold-text {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+    
+    /* Follow Us Icons */
+    .follow_us i {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .credits-footer {
+        padding-top: 1px 0;
+    }
+
+    .credits-footer p {
+        font-size: 11px;
+    }
+}
+
+/* Media Query for 320px to 480px */
+@media screen and (max-width: 480px) {
+    .section_title {
+        padding-bottom: 40px;
+        font-size: 25px;
+    }
+
+    nav ul {
+        display: inline-block; /* Treats ul as inline block to center it */
+        text-align: center; /* Centers the items inside ul */
+        margin: 0 auto; /* Centers ul itself */
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .container {
+        display: block;
+        margin-right: 20px;
+        margin-left: -30px;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 4px;
+    }
+
+
+    .phone_number {
+        display: none;
+        align-items: center; /* Vertically aligns the icon and number */
+    }
+
+    .phone_number .bx-phone {
+        margin-left: -40px;
+        display: none;
+    }
+    
+    .phone_number p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 14px; /* Adjust the size if needed */
+    }
+
+    nav .nav_logo a img {
+        width: 160px;
+        height: 45px;
+        margin-left: -6px;
+    }
+
+    .hero_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+        min-height: 100vh;
+        z-index: -1;
+    }
+
+    .hero_container .text_section h2 {
+        margin-top: -90px; 
+        text-align: center;
+        font-size: 30.5px;
+        color: black;
+        position: relative; 
+        margin-bottom: 20px;
+        margin-right: -13px;
+    }
+
+    .hero_container .text_section h3 {
+        margin-right: -10px;
+        margin-left: 65px;
+        font-size: 19px;
+        font-weight: 600;
+        color: black;
+        margin-top: 7px;
+        text-align:  center;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .hero_container .text_section p {
+        margin-right: -10px;
+        font-size: 16px;
+        font-weight: 400;
+        color: black;
+        margin: 17px 0 20px;
+        max-width: 50%;
+        margin-left: 73px;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero_container .hero_section_button {
+        margin-right: -10px;
+        display: flex;
+        gap: 24px;
+        z-index: 1;
+        margin-left: 67px;
+    }
+
+    .hero_container .hero_section_button .button {
+        padding: 6px 20px;
+        border: 1px solid transparent;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--secondary-color);
+        border-color: var(--black-color);
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+
+    .provider_card {
+        padding: 10px 0;
+        width: 40%; /* Make the cards full width */
+        margin-bottom: -30px;
+    }
+    
+    .provider_image {
+        width: 90%;
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+    
+    .provider_card h3 {
+        font-size: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .provider_card h3 span {
+        font-size: 10px;
+        margin-left: 0;
+        display: block;
+    }
+
+    .services_section .section_title {
+        font-size: 22px;
+        color: var(--black-color);
+        text-align: center;
+        margin: 0; 
+        margin-right: 0;
+        margin-right: 22px;
+    }
+
+    .services_section {
+        background-image: url('../images/servicesbg468px.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .services_list {
+        padding: 30px 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services_list li {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 10px;
+        width: 100%;
+    }
+
+    .services_list i {
+        font-size: 15px;
+        color: var(--primary-color);
+        margin-right: 10px;
+    }
+
+    .reviews {
+        padding: 20px 10px 40px; /* Adjust padding for smaller screens */
+    }
+
+    .reviews::after {
+        margin-top: 40px; /* Reduce spacing */
+        margin-bottom: 50px; /* Reduce bottom margin */
+    }
+
+    .reviews .section_title {
+        font-size: 20px; /* Adjust title size */
+    }
+
+    .reviews .reviews_container {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 8px; /* Adjust gap between items */
+        justify-items: center; /* Center align the grid items */
+    }
+
+    .reviews_container .reviews_items {
+        width: 100%; /* Adjust width for each review item */
+        max-width: 180px; /* Increase the max width to make the cards larger */
+        height: 210px; /* Increase height to make space for text overlay */
+        position: relative;
+    }
+
+    .reviews_container img {
+        height: 100%; /* Ensure the image fills the card */
+        border-radius: 8px;
+        object-fit: cover; /* Keep the image proportions */
+    }
+
+    .text_overlay {
+        top: 37%; /* Adjust text overlay positioning */
+        font-size: 0.6rem; /* Reduce font size */
+        width: 85%; /* Ensure text overlay fits within image */
+    }
+
+    footer {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer_section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .footer_logo img {
+        max-width: 90%;
+        margin-top: 20px;
+        margin-right: 0;
+        margin-left: 10px; 
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .contact_us,
+    .follow_us {
+        margin-bottom: 40px; /* Keep margin for spacing */
+        margin-right: 0; /* Remove right margin */
+        text-align: center; /* Center the text */
+    }
+
+    .contact_us h3,
+    .follow_us h3 {
+        font-size: 20px; /* Adjust title size */
+        margin-bottom: 20px; /* Reduce bottom margin */
+    }
+
+    .contact_us ul li {
+        margin-left: 10px;
+        margin-bottom: 5px; /* Adjust spacing for list items */
+    }
+
+    .contact_us ul li span {
+        font-size: 13px;
+        text-align: left;
+    }
+
+    .follow_us i {
+        width: 40px; /* Reduce icon size */
+        height: 40px; /* Reduce icon size */
+        font-size: 24px; /* Adjust font size for icons */
+    }
+
+    .credits-footer p {
+        font-size: 10px;
+    }
+}
