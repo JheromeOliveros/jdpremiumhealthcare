@@ -758,6 +758,10 @@ footer {
 
 /* Media Query for 769px to 1024px */
 @media screen and (max-width: 1024px) {
+    #nav-menu {
+        display: none; /* Hide the nav menu by default on smaller screens */
+    }
+
     nav ul {
         display: inline-block; /* Treats ul as inline block to center it */
         text-align: center; /* Centers the items inside ul */
@@ -939,6 +943,10 @@ footer {
 
 /* Media Query for 481px to 768px */
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    #nav-menu {
+        display: none; /* Hide the nav menu by default on smaller screens */
+    }
+
     nav ul {
         display: inline-block; /* Treats ul as inline block to center it */
         text-align: center; /* Centers the items inside ul */
@@ -1157,6 +1165,10 @@ footer {
 
 /* Media Query for 320px to 480px */
 @media screen and (max-width: 480px) {
+    #nav-menu {
+        display: none; /* Hide the nav menu by default on smaller screens */
+    }
+
     .section_title {
         padding-bottom: 40px;
         font-size: 25px;
@@ -1188,8 +1200,8 @@ footer {
 
 
     .phone_number {
-        display: none;
         align-items: center; /* Vertically aligns the icon and number */
+        display: none;
     }
 
     .phone_number .bx-phone {
@@ -1204,8 +1216,8 @@ footer {
     }
 
     nav .nav_logo a img {
-        width: 160px;
-        height: 45px;
+        width: 175px;
+        height: 48px;
         margin-left: -6px;
     }
 
@@ -1222,20 +1234,20 @@ footer {
     }
 
     .hero_container .text_section h2 {
-        margin-top: -90px; 
+        margin-top: -105px; 
         text-align: center;
-        font-size: 30.5px;
+        font-size: 40px;
         color: black;
         position: relative; 
         margin-bottom: 20px;
-        margin-right: -13px;
+        margin-right: -17px;
     }
 
     .hero_container .text_section h3 {
         margin-right: -10px;
         margin-left: 65px;
-        font-size: 19px;
-        font-weight: 600;
+        font-size: 25px;
+        font-weight: 700;
         color: black;
         margin-top: 7px;
         text-align:  center;
@@ -1245,7 +1257,7 @@ footer {
 
     .hero_container .text_section p {
         margin-right: -10px;
-        font-size: 16px;
+        font-size: 19px;
         font-weight: 400;
         color: black;
         margin: 17px 0 20px;
@@ -1267,7 +1279,7 @@ footer {
     .hero_container .hero_section_button .button {
         padding: 6px 20px;
         border: 1px solid transparent;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         color: var(--secondary-color);
         border-color: var(--black-color);
@@ -1276,29 +1288,34 @@ footer {
         cursor: pointer;
     }
 
-
     .provider_card {
-        padding: 10px 0;
-        width: 40%; /* Make the cards full width */
-        margin-bottom: -30px;
+        padding: 10px; /* Adjust padding for overall spacing */
+        width: calc(40% - 1px); /* Make the cards 50% width minus margin for spacing */
+        margin: 10px; /* Margin around the cards to separate them */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        display: inline-block; /* Allow cards to be next to each other */
+        vertical-align: top; /* Align cards at the top */
+        padding-bottom: 19px;
+        max-width: 1000px;
+        gap: 10px;
     }
     
     .provider_image {
-        width: 90%;
-        margin-bottom: 10px;
-        padding-left: 0;
+        width: 100%; /* Ensure image takes full width of the card */
+        margin-bottom: 12px; /* Spacing below the image */
+        padding-left: 0; /* Reset any padding */
     }
     
     .provider_card h3 {
-        font-size: 10px;
-        margin-left: 0;
-        text-align: center;
+        font-size: 12px; /* Font size for headings */
+        margin: 0; /* Remove margin for consistent spacing */
+        text-align: center; /* Center the text */
+        margin-left: -2px;
     }
     
     .provider_card h3 span {
-        font-size: 10px;
-        margin-left: 0;
-        display: block;
+        font-size: 12px; /* Font size for span text */
+        display: inline-block; /* Make span text block-level */
     }
 
     .services_section .section_title {
@@ -1307,7 +1324,7 @@ footer {
         text-align: center;
         margin: 0; 
         margin-right: 0;
-        margin-right: 22px;
+        margin-right: 90px;
     }
 
     .services_section {
@@ -1335,6 +1352,7 @@ footer {
         justify-content: flex-start;
         column-gap: 10px;
         width: 100%;
+        margin-left: 50px;
     }
 
     .services_list i {
@@ -1344,41 +1362,39 @@ footer {
     }
 
     .reviews {
-        padding: 20px 10px 40px; /* Adjust padding for smaller screens */
-    }
-
-    .reviews::after {
-        margin-top: 40px; /* Reduce spacing */
-        margin-bottom: 50px; /* Reduce bottom margin */
+        padding: 20px 10px 80px; /* Adjust padding for smaller screens */
     }
 
     .reviews .section_title {
-        font-size: 20px; /* Adjust title size */
+        font-size: 18px; /* Adjust title size for smaller screens */
+        text-align: center; /* Center the section title */
     }
 
     .reviews .reviews_container {
         display: grid; /* Use grid layout */
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-        gap: 8px; /* Adjust gap between items */
+        gap: 15px; /* Adjust gap between items */
         justify-items: center; /* Center align the grid items */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin: 0 auto; /* Center the grid itself */
     }
 
-    .reviews_container .reviews_items {
-        width: 100%; /* Adjust width for each review item */
-        max-width: 180px; /* Increase the max width to make the cards larger */
-        height: 210px; /* Increase height to make space for text overlay */
+    .reviews .reviews_items {
+        width: 100%; /* Full width for each review item */
+        max-width: 250px; /* Adjust max width for smaller screens */
+        height: 210px; /* Height for the cards */
         position: relative;
     }
 
-    .reviews_container img {
+    .reviews .reviews_items img {
         height: 100%; /* Ensure the image fills the card */
-        border-radius: 8px;
+        border-radius: 8px; /* Round corners of the image */
         object-fit: cover; /* Keep the image proportions */
     }
 
     .text_overlay {
         top: 37%; /* Adjust text overlay positioning */
-        font-size: 0.6rem; /* Reduce font size */
+        font-size: 0.8rem; /* Reduce font size */
         width: 85%; /* Ensure text overlay fits within image */
     }
 
@@ -1392,12 +1408,12 @@ footer {
     }
 
     .footer_logo img {
-        max-width: 90%;
+        max-width: 70%;
         margin-top: 20px;
         margin-right: 0;
-        margin-left: 10px; 
+        margin-left: 57px; 
         display: block;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .contact_us,
@@ -1414,7 +1430,7 @@ footer {
     }
 
     .contact_us ul li {
-        margin-left: 10px;
+        margin-left: -20px;
         margin-bottom: 5px; /* Adjust spacing for list items */
     }
 
@@ -1430,6 +1446,6 @@ footer {
     }
 
     .credits-footer p {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
