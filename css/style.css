@@ -509,7 +509,7 @@ footer {
 .footer_logo img {
     max-width: 350px;
     margin-top: 80px;
-    margin-right: 100px;
+    margin-right: 85px;
     margin-left: 10px;
 }
 
@@ -1480,7 +1480,7 @@ footer {
 
         .contact_us h3,
         .follow_us h3 {
-            font-size: 21px;
+            font-size: 20px;
             /* Adjust title size */
             margin-bottom: 20px;
             /* Reduce bottom margin */
